@@ -10,3 +10,13 @@ TVShow = 8 // gives the same error, meaning typescript actually automattically t
 let thing: any = "hi";
 thing = 9;
 thing();
+
+// the only time you would want to use the any type is when you are declaring a variable before inizializing it.
+
+const movies = ["The Gentleman", "A Knights Tale", "School of Rock"]
+
+let foundMovie;
+
+for(let movie of movies){
+  if(movie === "A Knights Tale") foundMovie = "A Knights Tale"
+}
