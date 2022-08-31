@@ -21,6 +21,16 @@ function whatsForLunch(food: string = 'Burrito') {
 // if you forget to include a return in a function ts wont give you an error it will just say void.
 // unless you also type the returned value ie
 
+//named func
 function add(num: number): number {
   return num + num;
 }
+
+// arrow func
+const multiply = (x: number, y: number): number => {
+  return x * y;
+}
+
+/////anonymous functions
+
+
