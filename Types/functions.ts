@@ -21,6 +21,8 @@ function whatsForLunch(food: string = 'Burrito') {
 // if you forget to include a return in a function ts wont give you an error it will just say void.
 // unless you also type the returned value ie
 
+// or add the type void to a function if the function is meant to return nothing. It will infer void, but ti will give you an error when your function returns something if you dont want it to. Or use never as a type to make sure a function NEVER stops or returns.
+
 //named func
 function add(num: number): number {
   return num + num;
