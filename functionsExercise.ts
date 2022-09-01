@@ -29,15 +29,21 @@ console.log(twoFer());
 // - year is a multiple of 400
 // hint - use modulo
 
+// function isLeapYear(year: number): boolean {
+//   if (year % 4 === 0 && year % 100 !== 0) {
+//     return true;
+//   }
+//   else if (year % 400 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+
+//refactor: if one is true return true otherwise return false;
 function isLeapYear(year: number): boolean {
-  if (year % 4 === 0 && year % 100 !== 0) {
-    return true;
-  }
-  else if (year % 400 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)
 }
 
 
