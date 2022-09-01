@@ -10,7 +10,7 @@ function twoFer(name) {
     if (name === void 0) { name = 'you'; }
     return "one for ".concat(name, ", one for me");
 }
-console.log(twoFer("Zuma"));
+console.log(twoFer('Zuma'));
 console.log(twoFer());
 // **********************************************
 // ******************* PART 2 *******************
@@ -24,3 +24,17 @@ console.log(twoFer());
 // OR...
 // - year is a multiple of 400
 // hint - use modulo
+function isLeapYear(year) {
+    if (year % 4 === 0 && year % 100 !== 0) {
+        return true;
+    }
+    else if (year % 400 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(isLeapYear(2020)) // true
+console.log(isLeapYear(1995)) // false
