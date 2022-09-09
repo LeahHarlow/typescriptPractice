@@ -15,9 +15,11 @@ function randoTinyCoordinate(): { x: number; y: number } {
 
 //at this point though type aliases can become pretty useful to keep our code drier. Its convention to use capitals. Super helpful for object types
 
+// the ? makes the arg optional 
 type Point = {
   x: number;
   y: number;
+  z?:number;
 };
 
 //this is now valid instead of lines above
