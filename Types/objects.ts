@@ -33,7 +33,7 @@ function doublePoint(point: Point): Point {
 
 // whoever was the brainchild of ts decided that if you pass objects directly into a function if you add any extra arguements from when you typed the functions expected input then you will get an error, BUT if you pass in a variable with extra info you wont get an error bc the function will just scan for what it needs, also you can pass in less arguements apperantly too
 
-printName({ first: 'Mick', last: 'Jagger', age: 473 });
+//printName({ first: 'Mick', last: 'Jagger', age: 473 });
 
 const singer = { first: 'Mick', last: 'Jagger', age: 473 };
 
@@ -64,9 +64,12 @@ function calculateArtistPayout(song: Song): number {
   return song.streams * goingRate;
 }
 
-function printSongInfo() {}
+function printSongInfo(song: Song): void {
+  console.log(`${song.title} - ${song.artist}, ${song.credits.producer}`);
+}
 
-let unchainedMelody = {
+//remember to type variables
+let unchainedMelody: Song = {
   title: 'Unchained Melody',
   artist: 'Righteous Brothers',
   streams: 462946367,
@@ -75,3 +78,5 @@ let unchainedMelody = {
     writer: 'Alex North',
   },
 };
+
+printSongInfo(unchainedMelody)
