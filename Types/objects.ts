@@ -38,3 +38,20 @@ printName({ first: 'Mick', last: 'Jagger', age: 473 });
 const singer = { first: 'Mick', last: 'Jagger', age: 473 };
 
 printName(singer);
+
+// Nested Objects:
+// pretend were spotify for a minute
+
+function calculateArtistPayout(song: {title: string, artist: string, streams: number, credits: {producer: string, writer: string}}){}
+
+function printSongInfo(){}
+
+let unchainedMelody ={
+  title: "Unchained Melody",
+  artist: "Righteous Brothers",
+  streams: 462946367,
+  credits: {
+    producer: "Phil Spector",
+    writer: "Alex North"
+  }
+}
