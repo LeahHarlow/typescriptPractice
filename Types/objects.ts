@@ -42,16 +42,36 @@ printName(singer);
 // Nested Objects:
 // pretend were spotify for a minute
 
-function calculateArtistPayout(song: {title: string, artist: string, streams: number, credits: {producer: string, writer: string}}){}
+//this is super long so we can separate the arguements out into a type
+// function calculateArtistPayout(song: {
+//   title: string;
+//   artist: string;
+//   streams: number;
+//   credits: { producer: string; writer: string };
+// }) {}
 
-function printSongInfo(){}
+type Song = {
+  title: string;
+  artist: string;
+  streams: number;
+  credits: { producer: string; writer: string };
+};
 
-let unchainedMelody ={
-  title: "Unchained Melody",
-  artist: "Righteous Brothers",
+let goingRate: number = 0.0033;
+
+//this makes the function much easier to read
+function calculateArtistPayout(song: Song): number {
+  return song.streams * goingRate;
+}
+
+function printSongInfo() {}
+
+let unchainedMelody = {
+  title: 'Unchained Melody',
+  artist: 'Righteous Brothers',
   streams: 462946367,
   credits: {
-    producer: "Phil Spector",
-    writer: "Alex North"
-  }
-}
+    producer: 'Phil Spector',
+    writer: 'Alex North',
+  },
+};
