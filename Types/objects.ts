@@ -15,7 +15,7 @@ function randoTinyCoordinate(): { x: number; y: number } {
 
 //at this point though type aliases can become pretty useful to keep our code drier. Its convention to use capitals. Super helpful for object types
 
-// the ? makes the arg optional 
+// the ? makes the arg optional
 type Point = {
   x: number;
   y: number;
@@ -82,3 +82,20 @@ let unchainedMelody: Song = {
 };
 
 printSongInfo(unchainedMelody)
+
+
+// you can also use the readonly modifier
+type User = {
+  readonly id: number,
+  userName: string,
+}
+
+let newUser: User = {
+  id: 123, // I can assign it initially, I have to actually.Reassigning after this initial one will fail though
+  userName: "ZumaBum"
+}
+
+//user.id = 12374937 will fail though its not allowed to be reassigned.
+// note that number is a primitive type so I cant touch it at all but if it was an object or array I could add to that just not change that its an object or array
+
+
