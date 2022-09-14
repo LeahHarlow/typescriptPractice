@@ -1,3 +1,5 @@
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+
 function printName(person: { first: string; last: string }): void {
   console.log(`${person.first}, ${person.last}`);
 }
@@ -98,4 +100,20 @@ let newUser: User = {
 //user.id = 12374937 will fail though its not allowed to be reassigned.
 // note that number is a primitive type so I cant touch it at all but if it was an object or array I could add to that just not change that its an object or array
 
+// you can also ampersand object types together and you will need both requirements to be met
 
+type Circle = {
+  radius: number
+}
+
+type Color = {
+  color: string
+}
+
+type ColorfulCircle = Circle & Color; // right ova heeya
+
+// so here we need both args now. 
+const blueDot: ColorfulCircle = {
+  radius: 3,
+  color: "Fanny Blue"
+}
