@@ -29,3 +29,4 @@ var getProfit = function (movie) {
     return (movie.boxOffice.grossWorldwide - movie.boxOffice.budget);
 };
 console.log(getProfit(cats));
+console.log(getProfit(dune));
