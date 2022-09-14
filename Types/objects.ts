@@ -21,7 +21,7 @@ function randoTinyCoordinate(): { x: number; y: number } {
 type Point = {
   x: number;
   y: number;
-  z?:number;
+  z?: number;
 };
 
 //this is now valid instead of lines above
@@ -83,19 +83,18 @@ let unchainedMelody: Song = {
   },
 };
 
-printSongInfo(unchainedMelody)
-
+printSongInfo(unchainedMelody);
 
 // you can also use the readonly modifier
 type User = {
-  readonly id: number,
-  userName: string,
-}
+  readonly id: number;
+  userName: string;
+};
 
 let newUser: User = {
   id: 123, // I can assign it initially, I have to actually.Reassigning after this initial one will fail though
-  userName: "ZumaBum"
-}
+  userName: 'ZumaBum',
+};
 
 //user.id = 12374937 will fail though its not allowed to be reassigned.
 // note that number is a primitive type so I cant touch it at all but if it was an object or array I could add to that just not change that its an object or array
@@ -103,17 +102,19 @@ let newUser: User = {
 // you can also ampersand object types together and you will need both requirements to be met
 
 type Circle = {
-  radius: number
-}
+  radius: number;
+};
 
 type Color = {
-  color: string
-}
+  color: string;
+};
 
 type ColorfulCircle = Circle & Color; // right ova heeya
 
-// so here we need both args now. 
+// so here we need both args now.
 const blueDot: ColorfulCircle = {
   radius: 3,
-  color: "Fanny Blue"
-}
+  color: 'Fanny Blue',
+};
+
+// you could also add another type with another ampersands on line 115 to add to it but it gets pretty clunky
