@@ -31,11 +31,16 @@ type Product = {
 // Write a function called getTotal that accepts an array of Product types
 // It should return the sum of all the products' prices
 
-let products: Product[] = []
+// let products: Product[] = []
 
-function getTotal(products): number {
-  return products.reduce(
-    (prevProduct: Product, currProduct: Product) =>
-      prevProduct.price + currProduct.price
-  );
+function getTotal(products: Product[]): number {
+  // return products.reduce(
+  //   (prevProduct: Product, currProduct: Product) =>
+  //     prevProduct.price + currProduct.price
+  // );
+  let total = 0;
+  for(let product of products){
+    total+= product.price;
+  }
+  return total;
 }
