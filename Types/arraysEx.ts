@@ -21,12 +21,21 @@ let gameBoard: string[][] = [];
 // {name: "coffee mug", price: 11.50}
 
 type Product = {
-  name: string,
-  price: number
-}
+  name: string;
+  price: number;
+};
 
 // **********************************************
 // ******************* PART 4 *******************
 // **********************************************
 // Write a function called getTotal that accepts an array of Product types
 // It should return the sum of all the products' prices
+
+let products: Product[] = []
+
+function getTotal(products): number {
+  return products.reduce(
+    (prevProduct: Product, currProduct: Product) =>
+      prevProduct.price + currProduct.price
+  );
+}
