@@ -53,6 +53,20 @@ type SkiSchoolStudent = {
 
 // Create an array called colors that can hold a mixture of RGB and HSL color types
 
+type RGB = {
+  r: number;
+  g: number;
+  b: number;
+}
+
+type HSL = {
+  h: number;
+  s: number;
+  l: number;
+}
+
+let colors: (RGB | HSL)[] = [];
+
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
