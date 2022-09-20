@@ -21,11 +21,31 @@ const calculateTax = (price: number | string, tax: number): number => {
 };
 
 //pudding
-calculateTax(45, .03)
-calculateTax("$45", .03)
+calculateTax(45, 0.03);
+calculateTax('$45', 0.03);
 
 //what if I want to have an array that can hold strings or numbers?
 // you coud use any but dont do that. Union those types
 
-let stuff: (number | string)[] = [] // like this
+let stuff: (number | string)[] = []; // this will make an array that takes number and strings
+let otherStuff: number[] | string[]; // this will be an array of ONLY numbers or ONLY strings
 
+// Literals
+// maybe you want to make something that CANNOT be changed
+
+let zero: 0 = 0;
+//zero = 2 this no worky now. Can only be 0.
+
+//a more useful example
+type DaysOfTheWeek =
+  | 'Monday'
+  | 'Tuesday'
+  | 'Wednesday'
+  | 'Thursday'
+  | 'Friday'
+  | 'Saturday'
+  | 'Sunday';
+
+type DayReference = 'Yesterday' | 'Today' | 'Tomorrow';
+
+let day: DayReference | DaysOfTheWeek = "Friday" // this is all good now but can ONLY be one of those types
