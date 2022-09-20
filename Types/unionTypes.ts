@@ -36,7 +36,7 @@ let otherStuff: number[] | string[]; // this will be an array of ONLY numbers or
 let zero: 0 = 0;
 //zero = 2 this no worky now. Can only be 0.
 
-//a more useful example
+//a more useful example, this lets us union types, not ALL strings, but THESE strings.
 type DaysOfTheWeek =
   | 'Monday'
   | 'Tuesday'
