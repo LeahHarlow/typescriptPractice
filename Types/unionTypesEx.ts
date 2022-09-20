@@ -20,6 +20,8 @@ let schtuff: (number | string)[] = ['3', 3];
 // Create a literal type called SkillLevel
 // There are 4 allowed values: "Beginner", "Intermediate", "Advanced", and "Expert"
 
+type SkillLevel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+
 // **********************************************
 // ******************* PART 4 *******************
 // **********************************************
