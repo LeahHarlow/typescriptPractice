@@ -3,7 +3,7 @@
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
 
-let highScore: number | boolean; 
+let highScore: number | boolean;
 
 // **********************************************
 // ******************* PART 2 *******************
@@ -11,6 +11,8 @@ let highScore: number | boolean;
 // create an array called stuff
 // it can be an array of numbers OR an array of strings
 // it cannot be an array of numbers and strings (mixed together)
+
+let schtuff: (number | string)[] = ['3', 3];
 
 // **********************************************
 // ******************* PART 3 *******************
