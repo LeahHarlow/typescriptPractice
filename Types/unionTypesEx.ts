@@ -3,7 +3,7 @@
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
 
-let highScore: number | boolean;
+let highScore: number | boolean = 10;
 
 // **********************************************
 // ******************* PART 2 *******************
@@ -73,13 +73,13 @@ let colors: (RGB | HSL)[] = [];
 // Write a function called greet that accepts a single string OR an array of strings
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
 
-function greet(name: (string[] | string)): void {
+function greet(name: string[] | string): void {
   if (typeof name === 'string') {
     console.log(`Hello ${name}`);
   } else {
-    name.forEach((name) => console.log(`Hello ${name}`))
+    name.forEach((name) => console.log(`Hello ${name}`));
   }
 }
 
 greet('Zuma');
-greet(['Aria', 'Doggo'])
+greet(['Aria', 'Doggo']);
