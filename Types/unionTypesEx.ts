@@ -31,6 +31,13 @@ type SkillLevel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
 // sport must be "ski" or "snowboard"
 // level must be a value from the SkillLevel type (from above)
 
+type SkiSchoolStudent = {
+  name: string;
+  age: number;
+  sport: 'ski' | 'snowboard';
+  level: SkillLevel;
+};
+
 // **********************************************
 // ******************* PART 5 *******************
 // **********************************************
