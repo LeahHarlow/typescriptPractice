@@ -23,3 +23,9 @@ const calculateTax = (price: number | string, tax: number): number => {
 //pudding
 calculateTax(45, .03)
 calculateTax("$45", .03)
+
+//what if I want to have an array that can hold strings or numbers?
+// you coud use any but dont do that. Union those types
+
+let stuff: (number | string)[] = [] // like this
+
