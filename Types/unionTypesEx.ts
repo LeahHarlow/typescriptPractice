@@ -82,4 +82,4 @@ function greet(name: (string[] | string)): void {
 }
 
 greet('Zuma');
-greet('Aria', 'Zuma')
+greet(['Aria', 'Doggo'])
