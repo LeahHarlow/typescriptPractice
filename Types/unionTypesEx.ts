@@ -57,13 +57,13 @@ type RGB = {
   r: number;
   g: number;
   b: number;
-}
+};
 
 type HSL = {
   h: number;
   s: number;
   l: number;
-}
+};
 
 let colors: (RGB | HSL)[] = [];
 
@@ -72,3 +72,14 @@ let colors: (RGB | HSL)[] = [];
 // **********************************************
 // Write a function called greet that accepts a single string OR an array of strings
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
+
+function greet(name: (string[] | string)): void {
+  if (typeof name === 'string') {
+    console.log(`Hello ${name}`);
+  } else {
+    name.forEach((name) => console.log(`Hello ${name}`))
+  }
+}
+
+greet('Zuma');
+greet('Aria', 'Zuma')
