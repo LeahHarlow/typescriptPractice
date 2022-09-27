@@ -19,13 +19,31 @@ let responses: HTTPResponse[] = [[200, "ok"], [500, "sever error"]]
 //Enums can be numbers, strings, or heterogenous
 
 enum Answers {
-  yes, //0
-  no, //1
-  maybe //2
+  YES, //0
+  NO, //1
+  MAYBE //2
 }
 
-const reply = Answers.yes;
+const reply = Answers.YES;//0
 
 // so this all works out and is really nice to read
 
+// you can also change values like so incase you dont want to work with numbers:
 
+enum Directions {
+  UP = 'up',
+  DOWN = "down",
+  LEFT = "left",
+  RIGHT = "right"
+}
+
+const firstMove = Directions.LEFT // left
+
+// good to note though that if you type enums like how they are above you will get a whole lot more js in your compiled file,
+//If you make in a const you will just have an object though
+
+const enum TrafficLights {
+  RED,
+  YELLOW,
+  GREEN
+}
