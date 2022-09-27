@@ -9,3 +9,5 @@ let Colour: [number, number, number] = [12, 34, 234];
 type HTTPResponse = [number, string];
 
 let responses: HTTPResponse[] = [[200, "ok"], [500, "sever error"]]
+
+// anyay thats pretty much the gist and you probably wont use these often
