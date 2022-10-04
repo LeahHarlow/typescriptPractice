@@ -30,3 +30,23 @@ const futureHusband: CelebCrush = {
 };
 
 futureHusband.first = 'Tom';
+
+// another example for where you might accept an arg
+
+interface Products {
+name: string;
+price: number;
+salePrice: (discount:number) => number;
+}
+
+let shoes: Products = {
+  name: "Nikes",
+  price: 100,
+  salePrice(discount: number) {
+    let newPrice = this.price * (1-discount);
+    this.price = newPrice;
+    return this.price;
+  }
+}
+
+console.log(shoes.salePrice(.3))
