@@ -34,28 +34,48 @@ futureHusband.first = 'Tom';
 // another example for where you might accept an arg
 
 interface Products {
-name: string;
-price: number;
-salePrice: (discount:number) => number;
+  name: string;
+  price: number;
+  salePrice: (discount: number) => number;
 }
 
 // multiple declarations of the same interface will just add required elements rather than override them
+// Its basically simple class inheritance
 
 interface Products {
-  serialNumber: number
+  serialNumber: number;
 }
 
-
 let shoes: Products = {
-  name: "Nikes",
+  name: 'Nikes',
   price: 100,
   salePrice(discount: number) {
-    let newPrice = this.price * (1-discount);
+    let newPrice = this.price * (1 - discount);
     this.price = newPrice;
     return this.price;
   },
-  serialNumber: 1249385;
+  serialNumber: 1249385,
+};
+
+console.log(shoes.salePrice(0.3));
+
+// we can extend interfaces as well
+// they will have all the valued of the interface thewy extend plus new ones you add under a different name now. you do HAVE to include all the values of both interfaces or will get an error;
+
+interface returnedProducts extends Products {
+  returned: boolean;
+  defective: boolean;
 }
 
-console.log(shoes.salePrice(.3))
-
+let returnedShoes: returnedProducts = {
+  name: 'Nikes',
+  price: 100,
+  serialNumber: 1249385,
+  salePrice(discount: number) {
+    let newPrice = this.price * (1 - discount);
+    this.price = newPrice;
+    return this.price;
+  },
+  returned: true,
+  defective: false
+};
