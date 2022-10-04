@@ -39,6 +39,13 @@ price: number;
 salePrice: (discount:number) => number;
 }
 
+// multiple declarations of the same interface will just add required elements rather than override them
+
+interface Products {
+  serialNumber: number
+}
+
+
 let shoes: Products = {
   name: "Nikes",
   price: 100,
@@ -46,7 +53,9 @@ let shoes: Products = {
     let newPrice = this.price * (1-discount);
     this.price = newPrice;
     return this.price;
-  }
+  },
+  serialNumber: 1249385;
 }
 
 console.log(shoes.salePrice(.3))
+

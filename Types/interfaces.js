@@ -19,3 +19,7 @@ var shoes = {
     }
 };
 console.log(shoes.salePrice(.3));
+
+
+
+
