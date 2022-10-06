@@ -1,9 +1,9 @@
-interface Product {
+interface FarmProduct {
   name: string;
   price: string;
   quantity: number;
 }
 
-const productLog = (product: Product) => {
+const productLog = (product: FarmProduct) => {
   console.log(product.name)
 }

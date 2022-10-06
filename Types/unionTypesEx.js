@@ -1,16 +1,17 @@
+"use strict";
 // **********************************************
 // ******************* PART 1 *******************
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
-var highScore = 10;
+let highScore = 10;
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
 // create an array called stuff
 // it can be an array of numbers OR an array of strings
 // it cannot be an array of numbers and strings (mixed together)
-var schtuff = ['3', 3];
-var colors = [];
+let schtuff = [3];
+let colors = [];
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
@@ -18,10 +19,10 @@ var colors = [];
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
 function greet(name) {
     if (typeof name === 'string') {
-        console.log("Hello ".concat(name));
+        console.log(`Hello ${name}`);
     }
     else {
-        name.forEach(function (name) { return console.log("Hello ".concat(name)); });
+        name.forEach((name) => console.log(`Hello ${name}`));
     }
 }
 greet('Zuma');
