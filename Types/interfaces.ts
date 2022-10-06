@@ -1,4 +1,8 @@
 // interfaces look almost identical to types but they are specifically for objects
+//interfaces can ONLY descibe object shapes.
+//We can also add on to or extend itnerfaces later in the code or in different files. We cant duplicate objects though.
+//You can also extend multiple interfaces into a new one where as types need unions with && to do that.
+
 
 // notice theres no = before the {} like in types
 interface NewPoint {
@@ -79,3 +83,6 @@ let returnedShoes: returnedProducts = {
   returned: true,
   defective: false
 };
+
+// you can also extend multiple interfaces together
+// interface blahblah extends this,andThat {}
