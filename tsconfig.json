@@ -100,4 +100,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }
+  // I can add the option here outside of the compiler if I only want certain files to compile when I run tsc
+  //"files": [file names here in double quotes]
 }

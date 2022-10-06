@@ -5,5 +5,5 @@ interface FarmProduct {
 }
 
 const productLog = (product: FarmProduct) => {
-  console.log(product.name)
+  console.log(product.name, product.price)
 }
